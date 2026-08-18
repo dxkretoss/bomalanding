@@ -4,6 +4,10 @@ import { MapPin, Users, HeartHandshake, TrendingUp } from 'lucide-react';
 import CTAButton from '../components/CTAButton';
 import { floatingAnimation, pulseGlow } from '../utils/animationUtils';
 
+import heroBg from '../assets/hero_bg.jpg';
+import avatarAmara from '../assets/avatar_amara.jpg';
+import avatarDavid from '../assets/avatar_david.jpg';
+
 export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#2E2330] text-[#F5F1EA] pt-28 pb-20 lg:pt-36 lg:pb-28 data-theme='dark'">
@@ -14,7 +18,7 @@ export const HeroSection = () => {
           initial={{ scale: 1.1, opacity: 0.7 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 2.2, ease: "easeOut" }}
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1920"
+          src={heroBg}
           alt="BOMA Living Modern Architectural Community"
           className="w-full h-full object-cover object-center filter brightness-[0.55] contrast-[1.1]"
         />
@@ -138,31 +142,32 @@ export const HeroSection = () => {
               </CTAButton>
             </motion.div>
 
-            {/* Live Trust Metrics Bar */}
+            {/* Pilot Launch & Waitlist Badge Banner (Redirects to #waitlist) */}
             <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.0 }}
-              className="pt-6 border-t border-[#F5F1EA]/10 grid grid-cols-3 gap-4 max-w-lg text-xs"
+              className="pt-4"
             >
-              <div>
-                <span className="block font-serif text-2xl font-bold text-[#F5F1EA]">840+</span>
-                <span className="text-[#F5F1EA]/60 font-medium">Village Test Takers</span>
-              </div>
-              <div>
-                <span className="block font-serif text-2xl font-bold text-[#D7A27A]">94%</span>
-                <span className="text-[#F5F1EA]/60 font-medium">Pod Alignment</span>
-              </div>
-              <div>
-                <span className="block font-serif text-2xl font-bold text-[#C46A4A]">Phase 1</span>
-                <span className="text-[#F5F1EA]/60 font-medium">King County Pilot</span>
-              </div>
+              <a
+                href="#waitlist"
+                className="inline-flex items-center gap-3 bg-[#F5F1EA]/10 hover:bg-[#F5F1EA]/15 backdrop-blur-md border border-[#F5F1EA]/20 rounded-full px-5 py-3 text-xs font-semibold text-[#F5F1EA] transition-all duration-300 shadow-lg group"
+              >
+                <span className="flex items-center gap-1.5 text-[#D7A27A]">
+                  <MapPin className="w-4 h-4 text-[#B87333]" />
+                  <span>Pilot launching in <strong className="text-white font-bold">King County, WA</strong></span>
+                </span>
+                <span className="w-px h-3.5 bg-[#F5F1EA]/20" />
+                <span className="text-[#D7A27A] group-hover:text-white transition-colors flex items-center gap-1 font-bold">
+                  Join the waitlist <span className="group-hover:translate-x-1 transition-transform">→</span>
+                </span>
+              </a>
             </motion.div>
 
           </div>
 
-          {/* RIGHT COLUMN: Interactive 3D/Glassmorphic Pod Preview Card */}
-          <div className="lg:col-span-5 relative flex justify-center">
+          {/* RIGHT COLUMN: Interactive 3D/Glassmorphic Pod Preview Card & Stats */}
+          <div className="lg:col-span-5 relative flex flex-col items-center">
             <motion.div
               variants={floatingAnimation}
               initial="initial"
@@ -176,12 +181,12 @@ export const HeroSection = () => {
                 <div className="flex items-center gap-2.5">
                   <div className="flex -space-x-2 overflow-hidden">
                     <img
-                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200"
+                      src={avatarAmara}
                       alt="Amara S."
                       className="inline-block h-8 w-8 rounded-full ring-2 ring-[#2E2330] object-cover"
                     />
                     <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+                      src={avatarDavid}
                       alt="David K."
                       className="inline-block h-8 w-8 rounded-full ring-2 ring-[#2E2330] object-cover"
                     />
@@ -235,7 +240,7 @@ export const HeroSection = () => {
                 <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/10 text-xs">
                   <div className="flex items-center gap-3">
                     <img
-                      src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200"
+                      src={avatarAmara}
                       alt="Amara S."
                       className="w-8 h-8 rounded-full object-cover border border-[#C46A4A]/50 flex-shrink-0"
                     />
@@ -250,7 +255,7 @@ export const HeroSection = () => {
                 <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/10 text-xs">
                   <div className="flex items-center gap-3">
                     <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+                      src={avatarDavid}
                       alt="David K."
                       className="w-8 h-8 rounded-full object-cover border border-[#B87333]/50 flex-shrink-0"
                     />
@@ -269,6 +274,27 @@ export const HeroSection = () => {
                   <HeartHandshake className="w-3.5 h-3.5" /> Shared Ownership Ready
                 </span>
                 <span className="font-bold text-white">Target: 4-Plex Compound</span>
+              </div>
+            </motion.div>
+
+            {/* Live Trust Metrics Bar (Moved to Bottom Right) */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.0 }}
+              className="pt-5 mt-4 w-full max-w-md border-t border-[#F5F1EA]/15 grid grid-cols-3 gap-4 text-xs text-center"
+            >
+              <div>
+                <span className="block font-serif text-2xl font-bold text-[#F5F1EA]">840+</span>
+                <span className="text-[#F5F1EA]/60 font-medium">Village Test Takers</span>
+              </div>
+              <div>
+                <span className="block font-serif text-2xl font-bold text-[#D7A27A]">94%</span>
+                <span className="text-[#F5F1EA]/60 font-medium">Pod Alignment</span>
+              </div>
+              <div>
+                <span className="block font-serif text-2xl font-bold text-[#C46A4A]">Phase 1</span>
+                <span className="text-[#F5F1EA]/60 font-medium">King County Pilot</span>
               </div>
             </motion.div>
           </div>

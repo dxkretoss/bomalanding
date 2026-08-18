@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import heroBg from '../assets/hero_bg.jpg';
 
 export const ArchitectureShowcase = () => {
   return (
@@ -13,7 +14,7 @@ export const ArchitectureShowcase = () => {
         className="absolute inset-0 z-0"
       >
         <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1920"
+          src={heroBg}
           alt="BOMA Living Architectural Modern Residential Community"
           className="w-full h-full object-cover object-center filter brightness-60 contrast-105"
         />

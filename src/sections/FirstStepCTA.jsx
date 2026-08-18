@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2, ShieldCheck } from 'lucide-react';
 import SectionLabel from '../components/SectionLabel';
 import CTAButton from '../components/CTAButton';
+import whoFriends from '../assets/who_friends.jpg';
 
 export const FirstStepCTA = () => {
   const benefits = [
@@ -17,7 +18,7 @@ export const FirstStepCTA = () => {
       {/* Background Architectural Photo with Deep Dark Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1600"
+          src={whoFriends}
           alt="BOMA Living Community Home"
           className="w-full h-full object-cover object-center filter brightness-[0.35] contrast-110"
         />

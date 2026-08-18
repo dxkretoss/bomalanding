@@ -2,6 +2,11 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MessageSquare, FileText, Users, Flag, ChevronRight, Sparkles, CheckCircle2, ShieldCheck, Paperclip, Smile, Send, FileCode } from 'lucide-react';
 
+import avatarAmara from '../assets/avatar_amara.jpg';
+import avatarDavid from '../assets/avatar_david.jpg';
+import avatarSarah from '../assets/avatar_sarah.jpg';
+import avatarElena from '../assets/avatar_elena.jpg';
+
 export const CommonsDashboard = ({ className = "" }) => {
   const [activeTab, setActiveTab] = useState('chat');
   const [chatMessage, setChatMessage] = useState('');
@@ -20,7 +25,7 @@ export const CommonsDashboard = ({ className = "" }) => {
       match: "96% Match",
       share: "25% Equity",
       status: "Verified Co-Buyer",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200",
+      avatar: avatarAmara,
       accent: "#C46A4A"
     },
     {
@@ -29,7 +34,7 @@ export const CommonsDashboard = ({ className = "" }) => {
       match: "92% Match",
       share: "25% Equity",
       status: "Verified Co-Buyer",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+      avatar: avatarDavid,
       accent: "#B87333"
     },
     {
@@ -38,7 +43,7 @@ export const CommonsDashboard = ({ className = "" }) => {
       match: "89% Match",
       share: "25% Equity",
       status: "Verified Co-Buyer",
-      avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=200",
+      avatar: avatarSarah,
       accent: "#D7A27A"
     },
     {
@@ -47,7 +52,7 @@ export const CommonsDashboard = ({ className = "" }) => {
       match: "Advisor",
       share: "Facilitator",
       status: "BOMA Lead",
-      avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200",
+      avatar: avatarElena,
       accent: "#C46A4A"
     }
   ];
@@ -150,22 +155,22 @@ export const CommonsDashboard = ({ className = "" }) => {
               </div>
               <div className="flex -space-x-2 overflow-hidden items-center">
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200"
+                  src={avatarAmara}
                   alt="Amara S."
                   className="inline-block h-6 w-6 rounded-full ring-2 ring-[#1A141C] object-cover"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+                  src={avatarDavid}
                   alt="David K."
                   className="inline-block h-6 w-6 rounded-full ring-2 ring-[#1A141C] object-cover"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=200"
+                  src={avatarSarah}
                   alt="Elena & Marcus"
                   className="inline-block h-6 w-6 rounded-full ring-2 ring-[#1A141C] object-cover"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
+                  src={avatarElena}
                   alt="Hether Morgan"
                   className="inline-block h-6 w-6 rounded-full ring-2 ring-[#1A141C] object-cover"
                 />
@@ -178,7 +183,7 @@ export const CommonsDashboard = ({ className = "" }) => {
               {/* Message 1: Amara S */}
               <div className="flex gap-3 items-start">
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200"
+                  src={avatarAmara}
                   alt="Amara S."
                   className="w-9 h-9 rounded-full object-cover border border-[#C46A4A]/50 flex-shrink-0 shadow-md"
                 />
@@ -212,7 +217,7 @@ export const CommonsDashboard = ({ className = "" }) => {
               {/* Message 2: Hether Morgan */}
               <div className="flex gap-3 items-start flex-row-reverse">
                 <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200"
+                  src={avatarElena}
                   alt="Hether Morgan"
                   className="w-9 h-9 rounded-full object-cover border border-[#B87333]/50 flex-shrink-0 shadow-md"
                 />
@@ -234,7 +239,7 @@ export const CommonsDashboard = ({ className = "" }) => {
               {/* Message 3: David K */}
               <div className="flex gap-3 items-start">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+                  src={avatarDavid}
                   alt="David K."
                   className="w-9 h-9 rounded-full object-cover border border-[#B87333]/50 flex-shrink-0 shadow-md"
                 />

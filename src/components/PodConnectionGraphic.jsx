@@ -2,6 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Home, Users, Sparkles, HeartHandshake } from 'lucide-react';
 
+import avatarAmara from '../assets/avatar_amara.jpg';
+import avatarDavid from '../assets/avatar_david.jpg';
+import avatarSarah from '../assets/avatar_sarah.jpg';
+
 export const PodConnectionGraphic = ({ className = "" }) => {
   const nodes = [
     {
@@ -9,7 +13,7 @@ export const PodConnectionGraphic = ({ className = "" }) => {
       name: "Amara S.",
       role: "Creative / Remote",
       score: "94% Match",
-      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200",
+      avatar: avatarAmara,
       delay: 0
     },
     {
@@ -17,7 +21,7 @@ export const PodConnectionGraphic = ({ className = "" }) => {
       name: "David K.",
       role: "Healthcare Worker",
       score: "91% Match",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200",
+      avatar: avatarDavid,
       delay: 0.2
     },
     {
@@ -25,7 +29,7 @@ export const PodConnectionGraphic = ({ className = "" }) => {
       name: "Elena & Marcus",
       role: "Educator / Engineer",
       score: "89% Match",
-      avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=200",
+      avatar: avatarSarah,
       delay: 0.4
     }
   ];

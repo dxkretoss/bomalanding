@@ -3,6 +3,12 @@ import { motion } from 'framer-motion';
 import { GraduationCap, Leaf, Users, Laptop, Palette } from 'lucide-react';
 import SectionLabel from '../components/SectionLabel';
 
+import whoFamilies from '../assets/who_families.jpg';
+import whoFriends from '../assets/who_friends.jpg';
+import whoSingles from '../assets/who_singles.jpg';
+import whoIntergenerational from '../assets/who_intergenerational.jpg';
+import whoCreatives from '../assets/who_creatives.jpg';
+
 export const WhoItsForSection = () => {
   const categories = [
     {
@@ -11,7 +17,7 @@ export const WhoItsForSection = () => {
       headline: "You earn enough. You just can't buy alone.",
       description: "Teachers, nurses, social workers, and creatives pool buying power with an aligned community to achieve homeownership.",
       tags: ["Stable income", "Priced out solo", "Wants stability + community"],
-      image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&q=80&w=800"
+      image: whoFamilies
     },
     {
       icon: Leaf,
@@ -19,7 +25,7 @@ export const WhoItsForSection = () => {
       headline: "You want more than a mortgage. You want a way of life.",
       description: "Cohousing, shared land, sustainability, and multi-family living structured with a compatible community that shares your vision.",
       tags: ["Cohousing interest", "Sustainability-focused", "Values-driven living"],
-      image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800"
+      image: whoFriends
     },
     {
       icon: Users,
@@ -27,7 +33,7 @@ export const WhoItsForSection = () => {
       headline: "Family support systems built into where you live.",
       description: "Aging parents, adult siblings, or extended family planning shared compounds and co-owned properties to keep family close.",
       tags: ["Family planning", "Aging-in-place", "Shared land goals"],
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800"
+      image: whoSingles
     },
     {
       icon: Laptop,
@@ -35,7 +41,7 @@ export const WhoItsForSection = () => {
       headline: "You're rethinking where — and how — you live.",
       description: "Remote workers seeking land, slower living, and a real sense of belonging without city commutes and isolation.",
       tags: ["Location-flexible", "Seeking community", "Rethinking city life"],
-      image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800"
+      image: whoIntergenerational
     },
     {
       icon: Palette,
@@ -43,7 +49,7 @@ export const WhoItsForSection = () => {
       headline: "Your lifestyle is specific. Your community should be too.",
       description: "Artists, musicians, gamers, and creative households finding a community that genuinely shares your world without judgment.",
       tags: ["Alternative lifestyles", "Creative communities", "Values-first matching"],
-      image: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=800"
+      image: whoCreatives
     }
   ];
 

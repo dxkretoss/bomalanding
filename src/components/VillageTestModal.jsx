@@ -7,6 +7,8 @@ import { useVillageTest } from '../context/VillageTestContext';
 import Logo from './Logo';
 import { submitVillageTestEntry } from '../supabaseClient';
 
+import heroBg from '../assets/hero_bg.jpg';
+
 const PhoneInput = RawPhoneInput.default || RawPhoneInput;
 
 export const villageTestQuestions = [
@@ -351,7 +353,7 @@ export const VillageTestModal = () => {
       {/* Full-Screen Page Backdrop Photo - Clearly Visible Architectural Image */}
       <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
         <img
-          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000"
+          src={heroBg}
           alt="BOMA Living Community Backdrop"
           className="w-full h-full object-cover filter brightness-[0.65] saturate-[1.1] scale-105"
         />
@@ -412,7 +414,7 @@ export const VillageTestModal = () => {
         {/* Background Image & Glassmorphic Overlay */}
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1600"
+            src={heroBg}
             alt="BOMA Living Community"
             className="w-full h-full object-cover filter brightness-[0.28] saturate-[0.85] scale-105"
           />
