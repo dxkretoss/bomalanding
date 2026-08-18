@@ -22,10 +22,10 @@ export const MobileMenu = ({ isOpen, onClose }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-[100] bg-[#2E2330] text-[#F5F1EA] flex flex-col justify-between p-6 sm:p-10 overflow-y-auto"
+          className="fixed inset-0 z-[100] bg-[#2E2330] text-[#F5F1EA] flex flex-col p-6 sm:p-10 overflow-y-auto"
         >
           {/* Top Bar */}
-          <div className="flex items-center justify-between border-b border-[#E7DED0]/10 pb-6">
+          <div className="flex items-center justify-between border-b border-[#E7DED0]/10 pb-6 shrink-0">
             <Link to="/" onClick={onClose}>
               <Logo variant="light" className="h-10 w-auto" />
             </Link>
@@ -38,8 +38,8 @@ export const MobileMenu = ({ isOpen, onClose }) => {
             </button>
           </div>
 
-          {/* Staggered Navigation Items */}
-          <div className="py-12 space-y-6">
+          {/* Staggered Navigation Items — Starting from Top */}
+          <div className="pt-6 pb-8 space-y-5 flex-1">
             {menuItems.map((item, index) => (
               <motion.div
                 key={item.label}
